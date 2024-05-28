@@ -1,15 +1,10 @@
 provider "aws" {
   access_key = "AKIAVRUVQLVQYETYBBNP"
   secret_key = "3QCZ8JZ/SmUW+C5bNEdr41MunxfeRB1edAhKj2TV"
-  region  = "ap-south-1"
-  profile = "harishkumarraju7"
+  region = "ap-south-1"
 }
 
-resource "aws_instance" "example_server" {
-  ami           = "ami-0cc9838aa7ab1dce7"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "JacksBlogExample"
-  }
+resource "aws_instance" "example" {
+  ami = "ami-0cc9838aa7ab1dce7"
+  instance_type = "t1.micro"
 }
